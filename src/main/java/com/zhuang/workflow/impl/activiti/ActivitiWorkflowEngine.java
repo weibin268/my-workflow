@@ -48,40 +48,28 @@ public class ActivitiWorkflowEngine extends AbstractWorkflowEngine {
 
     @Autowired
     private ProcessEngine processEngine;
-
     @Autowired
     private RepositoryService repositoryService;
-
     @Autowired
     private RuntimeService runtimeService;
-
     @Autowired
     private FormService formService;
-
     @Autowired
     private IdentityService identityService;
-
     @Autowired
     private TaskService taskService;
-
     @Autowired
     private HistoryService historyService;
-
     @Autowired
     private ManagementService managementService;
-
     @Autowired
     private ProcessDefinitionManager processDefinitionManager;
-
     @Autowired
     private ProcessVariablesManager processVariablesManager;
-
     @Autowired
     private ProcessInstanceManager processInstanceManager;
-
     @Autowired
     private UserTaskManager userTaskManager;
-
     @Autowired
     private UserManagementService userManagementService;
 
