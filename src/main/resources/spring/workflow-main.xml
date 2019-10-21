@@ -38,27 +38,19 @@
     </bean>
 
     <bean id="workflowQueryManager" class="com.zhuang.workflow.impl.activiti.ActivitiWorkflowQueryManager"></bean>
-
     <bean id="workflowDeployment" class="com.zhuang.workflow.impl.activiti.ActivitiWorkflowDeployment"></bean>
-
     <bean id="deploymentManager" class="com.zhuang.workflow.impl.activiti.manager.DeploymentManager">
         <property name="basePath" value="diagrams/"></property>
     </bean>
-
     <bean id="processDefinitionManager" class="com.zhuang.workflow.impl.activiti.manager.ProcessDefinitionManager">
     </bean>
-
     <bean id="processVariablesManager" class="com.zhuang.workflow.impl.activiti.manager.ProcessVariablesManager">
     </bean>
-
     <bean id="userTaskManager" class="com.zhuang.workflow.impl.activiti.manager.UserTaskManager">
     </bean>
-
     <bean id="processInstanceManager" class="com.zhuang.workflow.impl.activiti.manager.ProcessInstanceManager">
     </bean>
-
     <bean id="userManagementService" class="com.zhuang.workflow.service.impl.DefaultUserManagementService"></bean>
-
     <bean id="activitiTestBean" class="com.zhuang.workflow.test.ActivitiTestBean"></bean>
 
     <!-- <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">

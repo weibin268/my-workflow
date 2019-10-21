@@ -29,13 +29,11 @@ public class WorkflowBeansFactory {
 	}
 
 	public static WorkflowQueryManager getWorkflowQueryManager() {
-		return ApplicationContextUtils.getApplicationContext().getBean("workflowQueryManager",
-				WorkflowQueryManager.class);
+		return ApplicationContextUtils.getApplicationContext().getBean("workflowQueryManager", WorkflowQueryManager.class);
 	}
 
 	public static ProcessVariablesManager getProcessVariablesManager() {
-		return ApplicationContextUtils.getApplicationContext().getBean("processVariablesManager",
-				ProcessVariablesManager.class);
+		return ApplicationContextUtils.getApplicationContext().getBean("processVariablesManager", ProcessVariablesManager.class);
 	}
 
 	public static UserTaskManager getUserTaskManager() {
@@ -43,8 +41,7 @@ public class WorkflowBeansFactory {
 	}
 
 	public static ProcessInstanceManager getProcessInstanceManager() {
-		return ApplicationContextUtils.getApplicationContext().getBean("processInstanceManager",
-				ProcessInstanceManager.class);
+		return ApplicationContextUtils.getApplicationContext().getBean("processInstanceManager", ProcessInstanceManager.class);
 	}
 
 }
