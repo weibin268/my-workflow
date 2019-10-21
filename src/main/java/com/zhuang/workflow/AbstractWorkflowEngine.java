@@ -6,49 +6,48 @@ import java.util.Map;
 
 /**
  * 工作流引擎抽象基类
- * 
- * @author zwb
  *
+ * @author zwb
  */
 public abstract class AbstractWorkflowEngine implements WorkflowEngine {
 
-	/**
-	 * 工作流动作监听器集合
-	 */
-	protected WorkflowActionListenerMap workflowActionListeners;
+    /**
+     * 工作流动作监听器集合
+     */
+    protected WorkflowActionListenerMap workflowActionListeners;
 
-	protected NextTaskUsersHandlerMap nextTaskUsersHandlers;
+    protected NextTaskUsersHandlerMap nextTaskUsersHandlers;
 
-	public WorkflowActionListenerMap getWorkflowActionListeners() {
+    public WorkflowActionListenerMap getWorkflowActionListeners() {
 
-		return workflowActionListeners;
-	}
+        return workflowActionListeners;
+    }
 
-	public void setWorkflowActionListeners(WorkflowActionListenerMap workflowActionListeners) {
-		this.workflowActionListeners = workflowActionListeners;
-	}
+    public void setWorkflowActionListeners(WorkflowActionListenerMap workflowActionListeners) {
+        this.workflowActionListeners = workflowActionListeners;
+    }
 
-	public NextTaskUsersHandlerMap getNextTaskUsersHandlers() {
-		return nextTaskUsersHandlers;
-	}
+    public NextTaskUsersHandlerMap getNextTaskUsersHandlers() {
+        return nextTaskUsersHandlers;
+    }
 
-	public void setNextTaskUsersHandlers(NextTaskUsersHandlerMap nextTaskUsersHandlers) {
-		this.nextTaskUsersHandlers = nextTaskUsersHandlers;
-	}
+    public void setNextTaskUsersHandlers(NextTaskUsersHandlerMap nextTaskUsersHandlers) {
+        this.nextTaskUsersHandlers = nextTaskUsersHandlers;
+    }
 
-	public static class NextTaskUsersHandlerMap extends LinkedHashMap<String,NextTaskUsersHandler>
-	{
-		public NextTaskUsersHandlerMap(Map<String, NextTaskUsersHandler> map)
-		{
-			super(map);
+    public static class NextTaskUsersHandlerMap extends LinkedHashMap<String, NextTaskUsersHandler> {
+		public NextTaskUsersHandlerMap(){}
+        public NextTaskUsersHandlerMap(Map<String, NextTaskUsersHandler> map) {
+            super(map);
+        }
+    }
+
+    public static class WorkflowActionListenerMap extends LinkedHashMap<String, WorkflowActionListener> {
+    	public WorkflowActionListenerMap(){
+
 		}
-	}
-
-	public static class WorkflowActionListenerMap extends LinkedHashMap<String,WorkflowActionListener>
-	{
-		public WorkflowActionListenerMap(Map<String, WorkflowActionListener> map)
-		{
-			super(map);
-		}
-	}
+        public WorkflowActionListenerMap(Map<String, WorkflowActionListener> map) {
+            super(map);
+        }
+    }
 }
