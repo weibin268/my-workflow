@@ -22,6 +22,16 @@
 			</resource>
 		</resources>-->
 		<plugins>
+			<!--定义JDK版本-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
 			<!--排除执行测试代码-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -37,6 +47,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.3.5.RELEASE</spring.version>
+		<java.version>1.8</java.version>
+		<activiti.version>5.23.0</activiti.version>
 	</properties>
 
 	<dependencies>
@@ -91,14 +103,8 @@
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
-			<version>5.22.0</version>
+			<version>${activiti.version}</version>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>org.activiti</groupId>
-			<artifactId>activiti-spring</artifactId>
-			<version>6.0.0.Beta4</version>
-		</dependency>
- -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
